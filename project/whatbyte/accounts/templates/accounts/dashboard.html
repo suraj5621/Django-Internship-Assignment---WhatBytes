@@ -1,0 +1,26 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'accounts/styles.css' %}">
+</head>
+<body>
+
+    <h1><em>Dashboard Page </em></h1>
+    <div class="container">
+        <h1>Hi, {{ user.username }}!</h1>
+
+        <p>Welcome to your dashboard. Here you can manage your account and access various features.</p>
+   
+        <div style="display: flex;  align-items: center; justify-content: space-around; margin-top: 20px">
+            <a href="{% url 'profile' %}" class="link" >Profile</a>
+            <a href="{% url 'change_password' %}" class="link">Change Password</a>
+            <a href="{% url 'logout' %}" class="link">Logout</a>
+        </div>
+    </div>
+</body>
+</html> 
